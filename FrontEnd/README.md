@@ -1,4 +1,4 @@
-# 前後端串接MySQL資料庫 自學筆記
+# 前端(Vite)+後端(Spring Boot)串接 MySQL，自學筆記
 https://www.notion.so/2c41671fb1488081890afb545a1fc692?source=copy_link
 
 <br><br>
