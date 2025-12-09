@@ -25,10 +25,10 @@
 
 						<!-- 套用 BS5 樣式類型 Nav & Tabs 之相似版型 id="pills-tab" -->
 						<!-- 套用 BS5 樣式 justify-content-center (置中對齊), mb-4 (下邊距 1.5rem = 預設24px) -->
-						<ul class="nav nav-pills justify-content-center mb-4" id="pills-tab" role="tablist">
+						<ul class="nav nav-pills justify-content-center mb-4" id="pills-tab-id" role="tablist">
 
 							<li class="nav-item me-4" role="presentation">
-								<button class="nav-link active" id="pills-info-tab" data-bs-toggle="pill" data-bs-target="#pills-info"
+								<button class="nav-link active" id="pills-info-tab-id" data-bs-toggle="pill" data-bs-target="#pills-info"
 									type="button" role="tab" aria-controls="pills-info" aria-selected="true">
 									<!-- 引用 material icons: face 圖案-->
 									<!-- 套用 BS5 樣式 align-bottom (垂直置中), me-1 (右邊距 0.25rem = 預設4px) -->
@@ -39,7 +39,7 @@
 
 							<!-- 套用 BS5 樣式 me-4 (右邊距 1.5rem = 預設24px) -->
 							<li class="nav-item me-4" role="presentation">
-								<button class="nav-link" id="pills-record-tab" data-bs-toggle="pill" data-bs-target="#pills-record"
+								<button class="nav-link" id="pills-record-tab-id" data-bs-toggle="pill" data-bs-target="#pills-record-id"
 									type="button" role="tab" aria-controls="pills-record" aria-selected="false">
 									<!-- 引用 material icons: pending_actions 圖案-->
 									<span class="material-icons-outlined align-bottom me-1">pending_actions</span>
@@ -60,10 +60,10 @@
 						</ul>
 
 						<!-- 套用 BS5 樣式 p-5 (padding 5 = 3rem = 預設48px), shadow (陰影) \ rounded-panel (自訂樣式 圓角面板) -->
-						<div class="tab-content p-5 shadow rounded-panel" id="pills-tabContent">
+						<div class="tab-content p-5 shadow rounded-panel" id="pills-tabContent-id">
 
 							<!-- 這是個人資料的內容 -->
-							<div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab"
+							<div class="tab-pane fade show active" id="pills-info-id" role="tabpanel" aria-labelledby="pills-info-tab"
 								tabindex="0">
 								
 							  <!-- ⭐ 個人資料頁內容開始 -->
@@ -83,14 +83,14 @@
 											<!-- 頭貼與上傳按鈕 -->
 											<div class="d-flex align-items-center mb-4">
 
-												<img id="avatarPreview" src="/assets/images/avatar.png"
+												<img id="avatarPreview-id" src="/assets/images/avatar.png"
 													class="rounded-circle me-3" width="96" height="96"
 													style="object-fit: cover;" />
 
 												<div>
 													<label class="btn btn-outline-primary btn-sm mb-2">
 														更新頭貼
-														<input type="file" id="avatarInput" accept="image/*" hidden />
+														<input type="file" id="avatarInput-id" accept="image/*" hidden />
 													</label>
 												</div>
 											</div>
@@ -99,7 +99,7 @@
 											<div class="row mb-3">
 												<label class="form-label col-12 col-sm-3">暱稱</label>
 												<div class="col-12 col-sm-9">
-													<input id="nickname" class="form-control" />
+													<input id="username-id" class="form-control" />
 												</div>
 											</div>
 
@@ -125,7 +125,7 @@
 											<div class="row mb-3">
 												<label class="form-label col-12 col-sm-3">生日</label>
 												<div class="col-12 col-sm-9">
-													<input id="birthday" type="date" class="form-control" />
+													<input id="birthday-id" type="date" class="form-control" />
 												</div>
 											</div>
 
@@ -133,7 +133,7 @@
 											<div class="row mb-3">
 												<label class="form-label col-12 col-sm-3">Email</label>
 												<div class="col-12 col-sm-9">
-													<input id="email" class="form-control" />
+													<input id="email-id" class="form-control" />
 												</div>
 											</div>
 
@@ -141,7 +141,7 @@
 											<div class="row mb-3">
 												<label class="form-label col-12 col-sm-3">聯絡電話</label>
 												<div class="col-12 col-sm-9">
-													<input id="phone" class="form-control" />
+													<input id="phone-id" class="form-control" />
 												</div>
 											</div>
 
@@ -149,15 +149,15 @@
 											<div class="row mb-3">
 												<label class="form-label col-12 col-sm-3">通訊地址</label>
 												<div class="col-12 col-sm-9">
-													<input id="address" class="form-control" />
+													<input id="address-id" class="form-control" />
 												</div>
 											</div>
 
 											<!-- 按鈕區 -->
 											<div class="row mt-4">
 												<div class="col-12 col-sm-9 offset-sm-3 d-flex gap-3">
-													<button id="saveBtn" class="btn btn-primary">儲存更新</button>
-													<button id="resetBtn" class="btn btn-outline-secondary">重置</button>
+													<button id="saveBtn-id" class="btn btn-primary">儲存更新</button>
+													<button id="resetBtn-id" class="btn btn-outline-secondary">重置</button>
 												</div>
 											</div>
 
@@ -177,7 +177,7 @@
 							</div>
 							
 							<!-- 這是預約紀錄的內容 -->
-							<div class="tab-pane fade" id="pills-record" role="tabpanel" aria-labelledby="pills-record-tab"
+							<div class="tab-pane fade" id="pills-record-id" role="tabpanel" aria-labelledby="pills-record-tab"
 								tabindex="0">
 								<!-- 套用 BS5 樣式 fs-4 (字體大小 1.5rem = 預設24px), mb-4 (下邊距 1.5rem = 預設24px) -->
 								<h2 class="fs-4 mb-4">預約紀錄</h2>
@@ -350,9 +350,11 @@
 				</div>
 			</div>
 		</main>
-		<%- include('./layout/footer'); -%>
+	<%- include('./layout/footer'); -%>
 
-			<script type="module" src="../main.js"></script>
+	<!-- 使用 main.js -->
+	<script type="module" src="../main.js"></script>
+
 </body>
 
 </html>

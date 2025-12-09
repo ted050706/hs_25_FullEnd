@@ -35,6 +35,14 @@ export default defineConfig({
     // 啟動 server 時預設開啟的頁面
     // open: 'pages/index.html',
 		open: 'pages/user.html',
+		
+		// 設定 Proxy 轉發 API 請求
+		proxy: {
+    	'/api': {
+      	target: 'http://localhost:8081',
+      	changeOrigin: true
+    	}
+  	}
   },
   build: {
     rollupOptions: {
