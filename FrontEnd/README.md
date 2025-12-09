@@ -1,3 +1,9 @@
+# 前後端串接MySQL資料庫 自學筆記
+https://www.notion.so/2c41671fb1488081890afb545a1fc692?source=copy_link
+
+<br><br>
+***
+
 # 網頁切版直播班 Vite 範例 - Bootstrap 版本
 
 ## Node.js 版本
