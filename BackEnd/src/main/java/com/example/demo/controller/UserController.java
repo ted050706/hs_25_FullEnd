@@ -52,5 +52,30 @@ public class UserController {
         return ResponseEntity.ok(maxUser);
     }
 
+		
+		// ========================================================
+		// 🟧 Update：更新指定 ID 的使用者資料
+		// ========================================================
+		@PutMapping("/{id}")
+		public ResponseEntity<User> updateUser(
+						@PathVariable Integer id,
+						@RequestBody User updatedUser) {
+
+				// 檢查此 ID 的資料是否存在
+				return userRepo.findById(id)
+								.map(user -> {
+										// 更新資料欄位
+										user.setUsername(updatedUser.getUsername());
+										user.setEmail(updatedUser.getEmail());
+
+										// 儲存至資料庫
+										User saved = userRepo.save(user);
+
+										return ResponseEntity.ok(saved);
+								})
+								.orElseGet(() -> ResponseEntity.notFound().build());
+		}
+
+
 
 }

@@ -81,7 +81,7 @@ document.getElementById("readDataBtn-id")?.addEventListener("click", async () =>
         console.log("最大 ID 的資料：", data);
 
         // 將資料顯示在表單欄位中
-        // document.getElementById("id-id").value = data.id;         // 顯示 ID（通常 readonly）
+        document.getElementById("id-id").value = data.id;         // 顯示 ID（通常 readonly）
         document.getElementById("username-id").value = data.username;
         document.getElementById("email-id").value = data.email;
 
@@ -92,3 +92,55 @@ document.getElementById("readDataBtn-id")?.addEventListener("click", async () =>
         alert("查詢失敗：" + err);
     }
 });
+
+
+
+/* ====================================================
+   🔶 功能 3：更新使用者（PUT /api/users/{id}）
+==================================================== */
+document.getElementById("updateDataBtn-id")?.addEventListener("click", async () => {
+
+    // 1. 取得表單欄位
+    const id = document.getElementById("id-id").value.trim();
+    const username = document.getElementById("username-id").value.trim();
+    const email = document.getElementById("email-id").value.trim();
+
+    // ID 是必須的，沒有 ID 無法更新
+    if (!id) {
+        alert("尚未選擇要修改的資料（請先按『查最大 ID』）");
+        return;
+    }
+
+    if (!username || !email) {
+        alert("請填寫完整的使用者名稱與 Email");
+        return;
+    }
+
+    const bodyData = {
+        username: username,
+        email: email
+    };
+
+    try {
+        // 呼叫後端的 PUT 方法
+        const response = await fetch(`/api/users/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(bodyData)
+        });
+
+        if (!response.ok) {
+            throw new Error("更新失敗，後端回傳錯誤");
+        }
+
+        const result = await response.json();
+        alert(`更新成功！ID=${result.id}`);
+
+    } catch (error) {
+        console.error("更新失敗：", error);
+        alert("更新失敗：" + error);
+    }
+});
+
