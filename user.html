@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- 引入 Material Icons -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+	<title>index</title>
+  <script type="module" crossorigin src="/web-layout-training-vite/assets/main-BJB_afHe.js"></script>
+  <link rel="stylesheet" crossorigin href="/web-layout-training-vite/assets/main-NVWjncC0.css">
+</head>
+
+<body>
+	<!-- 引用至 BS5 的 Navbar 元件 -->
+<!-- 加入 BS5 樣式 border-bottom (底部邊框) -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+  <div class="container">
+
+    <a class="navbar-brand" href="#">
+			<!-- 加入圖片 -->
+			<img src="/web-layout-training-vite/assets/logo-CRTeTChE.svg" alt="logo">
+		</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<!-- me-auto 改用 mx-auto (水平置中) -->
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+				
+        <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li> -->
+
+				<!-- 複製使用 nav-link 物件*3 -->
+				<li class="nav-item">
+					<!-- 新增 me-3 (margin end 3) = 1rem = 預設16px -->
+          <a class="nav-link me-3" href="#">服務方案</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link me-3" href="#">關於職旅</a>
+        </li>
+				<li class="nav-item">
+          <a class="nav-link" href="#">聯絡我們</a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+
+		<!-- 新增圖片連結 -->
+		<a href="user.html">
+			<!-- 套用 BS5 樣式 rounded-circle(圓角), border(實線邊框px1), me-2(右邊距0.5rem=預設8px) -->
+			<img src="/web-layout-training-vite/assets/avatar-QGHQ479s.png" alt="user-image" class="rounded-circle border me-2 user-image">Mokumaru
+		</a>
+
+  </div>
+</nav>
+
+		<main class="bg-gray">
+			<!-- 套用 BS5 樣式 container, row, col-10 (網格系統) -->
+			<div class="container section-padding">
+				<!-- 套用 BS5 樣式 justify-content-center (置中對齊) -->
+				<div class="row justify-content-center">
+					<div class="col-10">
+
+						<!-- 套用 BS5 樣式類型 Nav & Tabs 之相似版型 id="pills-tab" -->
+						<!-- 套用 BS5 樣式 justify-content-center (置中對齊), mb-4 (下邊距 1.5rem = 預設24px) -->
+						<ul class="nav nav-pills justify-content-center mb-4" id="pills-tab-id" role="tablist">
+
+							<li class="nav-item me-4" role="presentation">
+								<button class="nav-link active" id="pills-info-tab-id" data-bs-toggle="pill" data-bs-target="#pills-info"
+									type="button" role="tab" aria-controls="pills-info" aria-selected="true">
+									<!-- 引用 material icons: face 圖案-->
+									<!-- 套用 BS5 樣式 align-bottom (垂直置中), me-1 (右邊距 0.25rem = 預設4px) -->
+									<span class="material-icons-outlined align-bottom me-1">face</span>
+									個人資料
+								</button>
+							</li>
+
+							<!-- 套用 BS5 樣式 me-4 (右邊距 1.5rem = 預設24px) -->
+							<li class="nav-item me-4" role="presentation">
+								<button class="nav-link" id="pills-record-tab-id" data-bs-toggle="pill" data-bs-target="#pills-record-id"
+									type="button" role="tab" aria-controls="pills-record" aria-selected="false">
+									<!-- 引用 material icons: pending_actions 圖案-->
+									<span class="material-icons-outlined align-bottom me-1">pending_actions</span>
+									預約紀錄</button>
+							</li>
+
+							<!-- <li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-plan-tab" data-bs-toggle="pill" data-bs-target="#pills-plan"
+									type="button" role="tab" aria-controls="pills-plan" aria-selected="false">
+									<span class="material-icons-outlined align-bottom me-1">list_alt</span>
+									職旅計畫</button>
+							</li> -->
+							<!-- <li class="nav-item" role="presentation">
+								<button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled"
+									type="button" role="tab" aria-controls="pills-disabled" aria-selected="false"
+									disabled>Disabled</button>
+							</li> -->
+						</ul>
+
+						<!-- 套用 BS5 樣式 p-5 (padding 5 = 3rem = 預設48px), shadow (陰影) \ rounded-panel (自訂樣式 圓角面板) -->
+						<div class="tab-content p-5 shadow rounded-panel" id="pills-tabContent-id">
+
+							<!-- 這是個人資料的內容 -->
+							<div class="tab-pane fade show active" id="pills-info-id" role="tabpanel" aria-labelledby="pills-info-tab"
+								tabindex="0">
+								
+							  <!-- ⭐ 個人資料頁內容開始 -->
+
+								<h2 class="fs-4 mb-4">個人資料</h2>
+
+								<!-- 使用 Bootstrap Grid 排版 -->
+								<div class="container-fluid">
+									<div class="row justify-content-center">
+
+										<!-- 左側留白區（設計稿中的空白 gutter） -->
+										<div class="col-12 col-md-2"></div>
+
+										<!-- 主要內容區 -->
+										<div class="col-12 col-md-8 col-lg-7">
+
+											<!-- 頭貼與上傳按鈕 -->
+											<div class="d-flex align-items-center mb-4">
+
+												<img id="avatarPreview-id" src="/web-layout-training-vite/assets/avatar-QGHQ479s.png"
+													class="rounded-circle me-3" width="96" height="96"
+													style="object-fit: cover;" />
+
+												<div>
+													<label class="btn btn-outline-primary btn-sm mb-2">
+														更新頭貼
+														<input type="file" id="avatarInput-id" accept="image/*" hidden />
+													</label>
+												</div>
+											</div>
+
+											<!-- 暱稱 -->
+											<div class="row mb-3">
+												<label class="form-label col-12 col-sm-3">暱稱</label>
+												<div class="col-12 col-sm-9">
+													<input id="username-id" class="form-control" />
+												</div>
+											</div>
+
+											<!-- 性別 -->
+											<div class="row mb-3">
+												<label class="form-label col-12 col-sm-3">性別</label>
+												<div class="col-12 col-sm-9">
+													<div class="d-flex align-items-center gap-3">
+														<label class="me-3">
+															<input type="radio" name="gender" value="female" /> 女性
+														</label>
+														<label class="me-3">
+															<input type="radio" name="gender" value="male" /> 男性
+														</label>
+														<label>
+															<input type="radio" name="gender" value="none" /> 不願透露
+														</label>
+													</div>
+												</div>
+											</div>
+
+											<!-- 生日 -->
+											<div class="row mb-3">
+												<label class="form-label col-12 col-sm-3">生日</label>
+												<div class="col-12 col-sm-9">
+													<input id="birthday-id" type="date" class="form-control" />
+												</div>
+											</div>
+
+											<!-- Email -->
+											<div class="row mb-3">
+												<label class="form-label col-12 col-sm-3">Email</label>
+												<div class="col-12 col-sm-9">
+													<input id="email-id" class="form-control" />
+												</div>
+											</div>
+
+											<!-- 電話 -->
+											<div class="row mb-3">
+												<label class="form-label col-12 col-sm-3">聯絡電話</label>
+												<div class="col-12 col-sm-9">
+													<input id="phone-id" class="form-control" />
+												</div>
+											</div>
+
+											<!-- 地址 -->
+											<div class="row mb-3">
+												<label class="form-label col-12 col-sm-3">通訊地址</label>
+												<div class="col-12 col-sm-9">
+													<input id="address-id" class="form-control" />
+												</div>
+											</div>
+
+											<!-- 按鈕區 -->
+											<div class="row mt-4">
+												<div class="col-12 col-sm-9 offset-sm-3 d-flex gap-3">
+													<button id="createDataBtn-id" class="btn btn-primary">增</button>
+													<button id="deleteDataBtn-id" class="btn btn-danger">刪</button>
+													<button id="readDataBtn-id" class="btn btn-secondary">查</button>
+													<button id="updateDataBtn-id" class="btn btn-warning">改</button>
+												</div>
+											</div>
+
+											<input type="hidden" id="id-id">
+
+										</div>
+
+										<!-- 右側預留區（可用來放廣告、空白） -->
+										<div class="col-12 col-md-2"></div>
+
+									</div>
+								</div>
+
+
+								<!-- ⭐ 個人資料頁內容結束 -->
+							
+							
+							
+							</div>
+							
+							<!-- 這是預約紀錄的內容 -->
+							<div class="tab-pane fade" id="pills-record-id" role="tabpanel" aria-labelledby="pills-record-tab"
+								tabindex="0">
+								<!-- 套用 BS5 樣式 fs-4 (字體大小 1.5rem = 預設24px), mb-4 (下邊距 1.5rem = 預設24px) -->
+								<h2 class="fs-4 mb-4">預約紀錄</h2>
+
+								<!-- 卡片型儀表板 -->
+								<!-- 套用 BS5 樣式 d-flex (彈性盒模型), gap-4 (間距 1.5rem = 預設24px), mb-5 (下邊距 3rem = 預設48px) --> 
+								<div class="d-flex gap-4 mb-5">
+
+									<!-- 卡片 1 -->
+									<!-- 引用 BS5 樣式類型 Card 模板, 通用樣式 w-100 (寬度 100%) -->
+									<div class="card w-100">
+										<!-- 套用 BS5 樣式 text-center (文字置中) -->
+										<div class="card-body text-center py-4">
+											<!-- 套用 BS5 樣式 fs-2 (字體大小 2.5rem = 預設40px), fw-bold (字體粗體) \ text-blue (自訂樣式 文字藍色) -->
+											<h3 class="fs-2 fw-bold mb-2 text-blue">3</h3>
+											<p class="subtitle">已完成諮詢</p>
+										</div>
+									</div>
+
+									<!-- 卡片2 -->
+									<div class="card w-100">
+										<div class="card-body text-center py-4">
+											<h3 class="fs-2 fw-bold mb-2 text-blue">2025/10/10</h3>
+											<p class="subtitle">即將到來</p>
+										</div>
+									</div>
+
+									<!-- 卡片3 -->
+									<div class="card w-100">
+										<div class="card-body text-center py-4">
+											<h3 class="fs-2 fw-bold mb-2 text-blue">3/6</h3>
+											<p class="subtitle">使用方案進度</p>
+										</div>
+									</div>
+
+								</div>
+
+								<!-- 表格資料清單 -->
+								 <!-- 套用 BS5 樣式 d-flex (彈性盒模型), justify-content-between (兩端對齊), mb-4 (下邊距 1.5rem = 預設24px) -->
+								<div class="d-flex justify-content-between mb-4">
+									<!-- 左上 3 個按鈕區 -->
+									<div>
+
+										<!-- 引用 BS5 樣式類型 Button 模板 btn-dark \ 通用樣式 me-2 (右邊距 0.5rem = 預設8px) -->
+										<button type="button" class="btn btn-dark me-2">
+											全部預約
+										</button>
+
+										<!-- 引用 BS5 樣式類型 Button 模板 btn-outline-dark \ 通用樣式 border (邊框), me-2 (右邊距 0.5rem = 預設8px) -->
+										<button type="button" class="btn btn-outline-dark border me-2">
+											已完成
+										</button>
+
+										<button type="button" class="btn btn-outline-dark border">
+											已取消
+										</button>
+									</div>
+
+									<!-- 右上 下拉式按鈕區 -->
+									<!-- 引用 BS5 樣式類型 Dropdown 模板 Single button -->
+									<div class="dropdown">
+										<!-- 改套用 BS5 通用樣式 border (邊框) -->
+										<button class="btn border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+											排序
+											<!-- 引用 material icons 的 filter_list 圖示 \ 套用 BS5 通用樣式 align-bottom (垂直置中), ms-1 (左邊距 0.25rem = 預設4px)	 -->
+											<span class="material-icons-outlined align-bottom ms-1">filter_list</span>
+										</button>
+										<!-- 套用 BS5 樣式 dropdown-menu-end (靠右對齊) -->
+										<ul class="dropdown-menu dropdown-menu-end">
+											<li><a class="dropdown-item" href="#">新到舊</a></li>
+											<li><a class="dropdown-item" href="#">舊到新</a></li>
+											<!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+										</ul>
+									</div>
+
+								</div>
+
+								<!-- 套用 BS5 樣式類別 Tables 模板 \ table-striped (橫條紋表格), table-hover (滑鼠懸停高亮) -->
+								<table class="table table-striped table-hover">
+								<thead>
+									<tr>
+										<th scope="col">諮詢方案</th>
+										<th scope="col">預約日期</th>
+										<th scope="col">諮詢時長</th>
+										<th scope="col">諮詢方式</th>
+										<th scope="col">上課狀態</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- 第 1 橫排資料 -->
+									<tr>
+										<td>職涯定位-職涯探索包 | 6/6堂</td>
+										<td>2025/11/11</td>
+										<td>60分鐘</td>
+										<!-- 引用 BS5 樣式 Badge 模板 round-pill (圓角標籤) \ 預設樣式 text-secondary (文字次要色), border (邊框) -->
+										<td><span class="badge round-pill text-secondary border">視訊</span></td>
+										<td>等待上課</td>
+									</tr>
+
+									<!-- 第 2 橫排資料 -->
+									<tr>
+										<td>職涯定位-職涯探索包 | 5/6堂</td>
+										<td>2025/10/10</td>
+										<td>60分鐘</td>
+										<td><span class="badge round-pill text-secondary border">視訊</span></td>
+										<td>等待上課</td>
+									</tr>
+
+									<!-- 第 3 橫排資料 -->
+									<tr>
+										<td class="text-secondary">職涯定位-職涯探索包 | 4/6堂</td>
+										<td class="text-secondary">2025/9/9</td>
+										<td class="text-secondary">60分鐘</td>
+										<td class="text-secondary"><span class="badge round-pill text-secondary border">視訊</span></td>
+										<td class="text-secondary">已完成</td>
+									</tr>
+
+									<!-- 第 4 橫排資料 -->
+									<tr>
+										<td class="text-secondary">職涯定位-職涯探索包 | 3/6堂</td>
+										<td class="text-secondary">2025/8/8</td>
+										<td class="text-secondary">60分鐘</td>
+										<td class="text-secondary"><span class="badge round-pill text-secondary border">視訊</span></td>
+										<td class="text-secondary">已完成</td>
+									</tr>
+
+									<!-- 第 5 橫排資料 -->
+									<tr>
+										<td class="text-secondary">職涯定位-職涯探索包 | 2/6堂</td>
+										<td class="text-secondary">2025/7/7</td>
+										<td class="text-secondary">60分鐘</td>
+										<td class="text-secondary"><span class="badge round-pill text-secondary border">視訊</span></td>
+										<td class="text-secondary">已完成</td>
+									</tr>
+
+									<!-- 第 6 橫排資料 -->
+									<tr>
+										<td class="text-secondary">職涯定位-職涯探索包 | 1/6堂</td>
+										<td class="text-secondary">2025/6/6</td>
+										<td class="text-secondary">60分鐘</td>
+										<td class="text-secondary"><span class="badge round-pill text-secondary border">視訊</span></td>
+										<td class="text-secondary">已完成</td>
+									</tr>
+
+
+									<!-- <tr>
+										<th scope="row">2</th>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>John</td>
+										<td>Doe</td>
+										<td>@social</td>
+									</tr> -->
+								</tbody>
+							</table>
+							</div>
+							
+							<!-- <div class="tab-pane fade" id="pills-plan" role="tabpanel" aria-labelledby="pills-plan-tab" tabindex="0">
+								...</div>
+							<div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div> -->
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</main>
+	<!-- <footer class="footer">footer</footer> -->
+
+<!-- Copyright © 2025 職旅 workway. All rights reserved -->
+	<!-- 使用 main.js -->
+
+</body>
+
+</html>
