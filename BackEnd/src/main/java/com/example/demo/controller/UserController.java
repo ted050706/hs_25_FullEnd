@@ -78,4 +78,22 @@ public class UserController {
 
 
 
+		// ========================================================
+		// 🟥 Delete：刪除指定 ID 使用者
+		// ========================================================
+		@DeleteMapping("/{id}")
+		public ResponseEntity<Void> deleteUser(@PathVariable Integer id) {
+
+				if (!userRepo.existsById(id)) {
+						// 若不存在該筆資料 → 回傳 404
+						return ResponseEntity.notFound().build();
+				}
+
+				userRepo.deleteById(id);  // 執行刪除
+				return ResponseEntity.noContent().build(); // 刪除成功 → 回傳 204
+		}
+
+
+
+
 }
